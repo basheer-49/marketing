@@ -94,13 +94,27 @@
         }
         .cta-btn:hover { transform: scale(1.05); box-shadow: 0 12px 35px rgba(212, 165, 116, 0.5); }
         .clients-section { padding: 60px 20px; position: relative; z-index: 2; overflow: hidden; }
-        .clients-carousel { display: flex; gap: 30px; animation: scroll-clients 25s linear infinite; width: max-content; }
-        @keyframes scroll-clients { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+        .clients-scroll-wrapper {
+            overflow-x: auto;
+            overflow-y: hidden;
+            -webkit-overflow-scrolling: touch;
+            scrollbar-width: thin;
+            scrollbar-color: rgba(212, 165, 116, 0.3) transparent;
+            padding-bottom: 10px;
+        }
+        .clients-scroll-wrapper::-webkit-scrollbar { height: 6px; }
+        .clients-scroll-wrapper::-webkit-scrollbar-track { background: transparent; }
+        .clients-scroll-wrapper::-webkit-scrollbar-thumb { background: rgba(212, 165, 116, 0.3); border-radius: 3px; }
+        .clients-track {
+            display: flex;
+            gap: 30px;
+            width: max-content;
+            padding: 0 20px;
+        }
         .client-logo { width: 120px; height: 120px; background: rgba(255,255,255,0.05); border-radius: 16px; display: flex; align-items: center; justify-content: center; padding: 15px; border: 1px solid rgba(212, 165, 116, 0.1); transition: all 0.4s ease; flex-shrink: 0; }
         .client-logo:hover { transform: scale(1.1); border-color: rgba(212, 165, 116, 0.4); box-shadow: 0 10px 30px rgba(0,0,0,0.3); }
         .client-logo img { max-width: 100%; max-height: 100%; object-fit: contain; filter: brightness(0.9); transition: filter 0.3s ease; }
         .client-logo:hover img { filter: brightness(1.1); }
-        .clients-wrapper { overflow: hidden; max-width: 100%; }
         .register-section { padding: 60px 20px; text-align: center; position: relative; z-index: 2; }
         .register-title { font-family: 'Noto Kufi Arabic', sans-serif; font-size: 1.8rem; font-weight: 700; color: var(--gold); margin-bottom: 20px; }
         .contact-section { padding: 60px 20px 40px; position: relative; z-index: 2; background: rgba(15, 15, 26, 0.8); }
@@ -228,21 +242,8 @@
 
         <section class="clients-section" id="clients">
             <h2 class="section-title">شركاؤنا في النجاح</h2>
-            <div class="clients-wrapper">
-                <div class="clients-carousel" id="clientsCarousel">
-                    <div class="client-logo"><img src="https://raw.githubusercontent.com/basheer-49/CCM/c4e47c07b37247d2a7548db351c93bc921929ec1/%D9%84%D9%8A%D9%86%D9%83%D9%8A%D8%AF%20%D8%A7%D9%86%20%D8%A8%D8%A7%D9%86%D8%B1%20(1080%20x%201080%20px)%20(3).png" alt="WRAP OFFER" loading="lazy"></div>
-                    <div class="client-logo"><img src="https://github.com/basheer-49/CCM/blob/main/%D9%84%D9%8A%D9%86%D9%83%D9%8A%D8%AF%20%D8%A7%D9%86%20%D8%A8%D8%A7%D9%86%D8%B1%20(1080%20x%201080%20px)%20(1).png?raw=true" alt="حنون" loading="lazy"></div>
-                    <div class="client-logo"><img src="https://github.com/basheer-49/CCM/blob/main/%D9%84%D9%8A%D9%86%D9%83%D9%8A%D8%AF%20%D8%A7%D9%86%20%D8%A8%D8%A7%D9%86%D8%B1%20(1080%20x%201080%20px)%20(10).png?raw=true" alt="دكان" loading="lazy"></div>
-                    <div class="client-logo"><img src="https://github.com/basheer-49/CCM/blob/main/%D9%84%D9%8A%D9%86%D9%83%D9%8A%D8%AF%20%D8%A7%D9%86%20%D8%A8%D8%A7%D9%86%D8%B1%20(1080%20x%201080%20px)%20(11).png?raw=true" alt="AK UNIFORM" loading="lazy"></div>
-                    <div class="client-logo"><img src="https://github.com/basheer-49/CCM/blob/main/%D9%84%D9%8A%D9%86%D9%83%D9%8A%D8%AF%20%D8%A7%D9%86%20%D8%A8%D8%A7%D9%86%D8%B1%20(1080%20x%201080%20px)%20(12).png?raw=true" alt="قصر عثمان" loading="lazy"></div>
-                    <div class="client-logo"><img src="https://github.com/basheer-49/CCM/blob/main/%D9%84%D9%8A%D9%86%D9%83%D9%8A%D8%AF%20%D8%A7%D9%86%20%D8%A8%D8%A7%D9%86%D8%B1%20(1080%20x%201080%20px)%20(13).png?raw=true" alt="سقيا الخير" loading="lazy"></div>
-                    <div class="client-logo"><img src="https://github.com/basheer-49/CCM/blob/main/%D9%84%D9%8A%D9%86%D9%83%D9%8A%D8%AF%20%D8%A7%D9%86%20%D8%A8%D8%A7%D9%86%D8%B1%20(1080%20x%201080%20px)%20(14).png?raw=true" alt="رذاذ" loading="lazy"></div>
-                    <div class="client-logo"><img src="https://github.com/basheer-49/CCM/blob/main/%D9%84%D9%8A%D9%86%D9%83%D9%8A%D8%AF%20%D8%A7%D9%86%20%D8%A8%D8%A7%D9%86%D8%B1%20(1080%20x%201080%20px)%20(4).png?raw=true" alt="OCEAN" loading="lazy"></div>
-                    <div class="client-logo"><img src="https://github.com/basheer-49/CCM/blob/main/%D9%84%D9%8A%D9%86%D9%83%D9%8A%D8%AF%20%D8%A7%D9%86%20%D8%A8%D8%A7%D9%86%D8%B1%20(1080%20x%201080%20px)%20(5).png?raw=true" alt="PRO PORTAL" loading="lazy"></div>
-                    <div class="client-logo"><img src="https://github.com/basheer-49/CCM/blob/main/%D9%84%D9%8A%D9%86%D9%83%D9%8A%D8%AF%20%D8%A7%D9%86%20%D8%A8%D8%A7%D9%86%D8%B1%20(1080%20x%201080%20px)%20(6).png?raw=true" alt="CCM" loading="lazy"></div>
-                    <div class="client-logo"><img src="https://github.com/basheer-49/CCM/blob/main/%D9%84%D9%8A%D9%86%D9%83%D9%8A%D8%AF%20%D8%A7%D9%86%20%D8%A8%D8%A7%D9%86%D8%B1%20(1080%20x%201080%20px)%20(7).png?raw=true" alt="خان زمان" loading="lazy"></div>
-                    <div class="client-logo"><img src="https://github.com/basheer-49/CCM/blob/main/%D9%84%D9%8A%D9%86%D9%83%D9%8A%D8%AF%20%D8%A7%D9%86%20%D8%A8%D8%A7%D9%86%D8%B1%20(1080%20x%201080%20px)%20(8).png?raw=true" alt="حلول الوطن" loading="lazy"></div>
-                    <div class="client-logo"><img src="https://github.com/basheer-49/CCM/blob/main/%D9%84%D9%8A%D9%86%D9%83%D9%8A%D8%AF%20%D8%A7%D9%86%20%D8%A8%D8%A7%D9%86%D8%B1%20(1080%20x%201080%20px).png?raw=true" alt="البشير بن محمد أبو عمر" loading="lazy"></div>
+            <div class="clients-scroll-wrapper">
+                <div class="clients-track" id="clientsTrack">
                     <div class="client-logo"><img src="https://raw.githubusercontent.com/basheer-49/CCM/c4e47c07b37247d2a7548db351c93bc921929ec1/%D9%84%D9%8A%D9%86%D9%83%D9%8A%D8%AF%20%D8%A7%D9%86%20%D8%A8%D8%A7%D9%86%D8%B1%20(1080%20x%201080%20px)%20(3).png" alt="WRAP OFFER" loading="lazy"></div>
                     <div class="client-logo"><img src="https://github.com/basheer-49/CCM/blob/main/%D9%84%D9%8A%D9%86%D9%83%D9%8A%D8%AF%20%D8%A7%D9%86%20%D8%A8%D8%A7%D9%86%D8%B1%20(1080%20x%201080%20px)%20(1).png?raw=true" alt="حنون" loading="lazy"></div>
                     <div class="client-logo"><img src="https://github.com/basheer-49/CCM/blob/main/%D9%84%D9%8A%D9%86%D9%83%D9%8A%D8%AF%20%D8%A7%D9%86%20%D8%A8%D8%A7%D9%86%D8%B1%20(1080%20x%201080%20px)%20(10).png?raw=true" alt="دكان" loading="lazy"></div>
