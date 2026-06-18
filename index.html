@@ -26,7 +26,7 @@
         .nav-links { display: flex; gap: 20px; list-style: none; }
         .nav-links a {
             color: var(--white); text-decoration: none; font-size: 0.85rem; font-weight: 500;
-            position: relative; padding: 4px 0; transition: color 0.3s ease;
+            position: relative; padding: 4px 0; transition: color 0.3s ease; cursor: pointer;
         }
         .nav-links a::after {
             content: ''; position: absolute; bottom: 0; right: 0; width: 0; height: 2px;
@@ -164,10 +164,10 @@
             <img src="https://github.com/basheer-49/CCM/blob/main/%D9%84%D9%8A%D9%86%D9%83%D9%8A%D8%AF%20%D8%A7%D9%86%20%D8%A8%D8%A7%D9%86%D8%B1%20(1080%20x%201080%20px)%20(6).png?raw=true" alt="CCM Logo">
         </div>
         <ul class="nav-links">
-            <li><a href="#" onclick="showHome()" class="nav-link active">الرئيسية</a></li>
-            <li><a href="#services" onclick="showHome(); scrollToSection('services')" class="nav-link">خدماتنا</a></li>
-            <li><a href="#contact" onclick="showHome(); scrollToSection('contact')" class="nav-link">تواصل</a></li>
-            <li><a href="#" onclick="showAbout()" class="nav-link">من نحن</a></li>
+            <li><a class="nav-link active" onclick="showHome(); return false;">الرئيسية</a></li>
+            <li><a class="nav-link" onclick="goToServices(); return false;">خدماتنا</a></li>
+            <li><a class="nav-link" onclick="goToContact(); return false;">تواصل</a></li>
+            <li><a class="nav-link" onclick="showAbout(); return false;">من نحن</a></li>
         </ul>
     </nav>
 
@@ -334,6 +334,14 @@
             document.querySelector('.nav-link[onclick*="showHome"]').classList.add('active');
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
+        function goToServices() {
+            showHome();
+            setTimeout(() => { document.getElementById('services').scrollIntoView({ behavior: 'smooth' }); }, 100);
+        }
+        function goToContact() {
+            showHome();
+            setTimeout(() => { document.getElementById('contact').scrollIntoView({ behavior: 'smooth' }); }, 100);
+        }
         function showAbout() {
             document.getElementById('mainContent').classList.add('hidden');
             document.getElementById('aboutPage').classList.add('active');
@@ -347,9 +355,6 @@
             document.getElementById('aboutPage').classList.remove('active');
             document.getElementById('joinPage').classList.add('active');
             window.scrollTo({ top: 0, behavior: 'smooth' });
-        }
-        function scrollToSection(id) {
-            setTimeout(() => { document.getElementById(id).scrollIntoView({ behavior: 'smooth' }); }, 100);
         }
         function submitForm(e) {
             e.preventDefault();
