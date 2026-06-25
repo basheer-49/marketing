@@ -31,15 +31,15 @@ body { font-family: 'Tajawal', 'Noto Kufi Arabic', sans-serif; background: var(-
 .nav-links a:hover { color: var(--gold); }
 
 /* Hero */
-.hero { min-height: 90vh; display: flex; align-items: center; justify-content: center; position: relative; padding: 120px 20px 60px; overflow: hidden; }
+.hero { min-height: 70vh; display: flex; align-items: center; justify-content: center; position: relative; padding: 80px 15px 15px; overflow: hidden; }
 .hero-bg-fade { position: absolute; bottom: 0; left: 0; width: 100%; height: 150px; background: linear-gradient(to top, var(--dark), transparent); z-index: 2; }
-.hero-content { display: flex; align-items: center; justify-content: center; max-width: 1200px; width: 100%; gap: 40px; position: relative; z-index: 3; }
-.hero-text { flex: 1; text-align: center; }
-.hero-text h1 { font-family: 'Noto Kufi Arabic', sans-serif; font-size: 4rem; font-weight: 900; color: var(--gold); margin-bottom: 10px; text-shadow: 0 0 40px rgba(212, 165, 116, 0.4); letter-spacing: 2px; }
-.hero-text .subtitle { font-size: 1.2rem; color: var(--gold); opacity: 0.9; margin-bottom: 8px; }
-.hero-text .tagline { font-size: 1rem; color: rgba(255,255,255,0.7); font-weight: 300; white-space: nowrap; }
-.hero-image-container { flex: 1; display: flex; justify-content: center; align-items: center; position: relative; }
-.hero-image-wrapper { position: relative; width: 320px; height: 320px; }
+.hero-content { display: flex; align-items: center; justify-content: center; max-width: 900px; width: 100%; gap: 20px; position: relative; z-index: 3; }
+.hero-text { flex: 1; text-align: right; }
+.hero-text h1 { font-family: 'Noto Kufi Arabic', sans-serif; font-size: 2.5rem; font-weight: 900; color: var(--gold); margin-bottom: 6px; text-shadow: 0 0 30px rgba(212, 165, 116, 0.4); letter-spacing: 2px; }
+.hero-text .subtitle { font-size: 0.85rem; color: var(--gold); opacity: 0.9; margin-bottom: 4px; }
+.hero-text .tagline { font-size: 0.75rem; color: rgba(255,255,255,0.7); font-weight: 300; }
+.hero-image-container { flex: 0.6; display: flex; justify-content: center; align-items: center; position: relative; }
+.hero-image-wrapper { position: relative; width: 200px; height: 200px; }
 .hero-image-wrapper::before { content: ''; position: absolute; top: -10px; left: -10px; right: -10px; bottom: -10px; background: radial-gradient(circle, rgba(212, 165, 116, 0.15) 0%, transparent 70%); border-radius: 50%; animation: pulse-glow 4s ease-in-out infinite; }
 @keyframes pulse-glow { 0%, 100% { transform: scale(1); opacity: 0.5; } 50% { transform: scale(1.1); opacity: 0.8; } }
 .hero-image { width: 100%; height: 100%; object-fit: contain; border-radius: 20px; position: relative; z-index: 2; -webkit-mask-image: linear-gradient(to bottom, black 70%, transparent 100%); mask-image: linear-gradient(to bottom, black 70%, transparent 100%); box-shadow: 0 20px 40px rgba(0,0,0,0.5); }
@@ -47,78 +47,78 @@ body { font-family: 'Tajawal', 'Noto Kufi Arabic', sans-serif; background: var(-
 @keyframes shadow-float { 0%, 100% { transform: translateY(0) rotate(0deg); } 50% { transform: translateY(-15px) rotate(2deg); } }
 
 /* Welcome */
-.welcome-section { padding: 60px 20px; text-align: center; position: relative; z-index: 2; }
-.welcome-title { font-family: 'Noto Kufi Arabic', sans-serif; font-size: 2.2rem; font-weight: 700; color: var(--gold); margin-bottom: 15px; }
+.welcome-section { padding: 20px 20px; text-align: center; position: relative; z-index: 2; }
+.welcome-title { margin-bottom: 8px; font-family: 'Noto Kufi Arabic', sans-serif; font-size: 2.2rem; font-weight: 700; color: var(--gold); margin-bottom: 8px; }
 .welcome-subtitle { font-size: 1rem; color: rgba(255,255,255,0.6); font-weight: 300; }
 
 /* Services */
-.services-section { padding: 60px 20px; position: relative; z-index: 2; overflow: hidden; }
-.section-title { font-family: 'Noto Kufi Arabic', sans-serif; font-size: 2rem; font-weight: 700; color: var(--gold); text-align: center; margin-bottom: 40px; position: relative; z-index: 1; }
+.services-section { padding: 35px 20px; position: relative; z-index: 2; overflow: hidden; }
+.section-title { font-family: 'Noto Kufi Arabic', sans-serif; font-size: 1.7rem; font-weight: 700; color: var(--gold); text-align: center; margin-bottom: 25px; position: relative; z-index: 1; }
 .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; max-width: 1100px; margin: 0 auto; position: relative; z-index: 1; }
-.service-card { background: rgba(255,255,255,0.03); border: 1px solid rgba(212, 165, 116, 0.15); border-radius: 16px; padding: 28px 20px; text-align: center; position: relative; overflow: hidden; }
+.service-card { background: rgba(255,255,255,0.03); border: 1px solid rgba(212, 165, 116, 0.15); border-radius: 14px; padding: 22px 16px; text-align: center; position: relative; overflow: hidden; }
 .service-card:hover { transform: translateY(-8px); border-color: rgba(212, 165, 116, 0.4); box-shadow: 0 15px 30px rgba(0,0,0,0.3); }
-.service-icon { width: 60px; height: 60px; margin: 0 auto 15px; background: linear-gradient(135deg, rgba(212, 165, 116, 0.2), rgba(233, 69, 96, 0.1)); border-radius: 16px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; color: var(--gold); border: 1px solid rgba(212, 165, 116, 0.3); transition: all 0.4s ease; }
+.service-icon { width: 50px; height: 50px; margin: 0 auto 12px; background: linear-gradient(135deg, rgba(212, 165, 116, 0.2), rgba(233, 69, 96, 0.1)); border-radius: 14px; display: flex; align-items: center; justify-content: center; font-size: 1.3rem; color: var(--gold); border: 1px solid rgba(212, 165, 116, 0.3); transition: all 0.4s ease; }
 .service-card:hover .service-icon { background: linear-gradient(135deg, rgba(212, 165, 116, 0.3), rgba(233, 69, 96, 0.2)); transform: scale(1.1) rotate(5deg); box-shadow: 0 0 20px rgba(212, 165, 116, 0.3); }
-.service-card h3 { font-size: 1.1rem; font-weight: 700; color: var(--white); margin-bottom: 8px; }
-.service-card p { font-size: 0.85rem; color: rgba(255,255,255,0.6); }
+.service-card h3 { font-size: 1rem; font-weight: 700; color: var(--white); margin-bottom: 8px; }
+.service-card p { font-size: 0.8rem; color: rgba(255,255,255,0.6); }
 
 /* CTA */
-.cta-section { padding: 50px 20px; text-align: center; position: relative; z-index: 2; }
-.cta-btn { display: inline-block; padding: 14px 40px; background: linear-gradient(135deg, var(--gold), #b8935f); color: var(--dark); font-size: 1.1rem; font-weight: 700; border: none; border-radius: 50px; cursor: pointer; text-decoration: none; transition: all 0.4s ease; box-shadow: 0 8px 25px rgba(212, 165, 116, 0.3); }
+.cta-section { padding: 20px 20px; text-align: center; position: relative; z-index: 2; }
+.cta-btn { display: inline-block; padding: 12px 32px; background: linear-gradient(135deg, var(--gold), #b8935f); color: var(--dark); font-size: 1rem; font-weight: 700; border: none; border-radius: 50px; cursor: pointer; text-decoration: none; transition: all 0.4s ease; box-shadow: 0 8px 25px rgba(212, 165, 116, 0.3); }
 .cta-btn:hover { transform: scale(1.05); box-shadow: 0 12px 35px rgba(212, 165, 116, 0.5); }
 
 /* Clients */
-.clients-section { padding: 60px 20px; position: relative; z-index: 2; overflow: hidden; }
+.clients-section { padding: 35px 20px; position: relative; z-index: 2; overflow: hidden; }
 .clients-scroll-wrapper { overflow-x: auto; overflow-y: hidden; -webkit-overflow-scrolling: touch; scrollbar-width: thin; scrollbar-color: rgba(212, 165, 116, 0.3) transparent; padding-bottom: 10px; }
 .clients-scroll-wrapper::-webkit-scrollbar { height: 6px; }
 .clients-scroll-wrapper::-webkit-scrollbar-track { background: transparent; }
 .clients-scroll-wrapper::-webkit-scrollbar-thumb { background: rgba(212, 165, 116, 0.3); border-radius: 3px; }
 .clients-track { display: flex; gap: 30px; width: max-content; padding: 0 20px; }
-.client-logo { width: 120px; height: 120px; background: rgba(255,255,255,0.05); border-radius: 16px; display: flex; align-items: center; justify-content: center; padding: 15px; border: 1px solid rgba(212, 165, 116, 0.1); transition: all 0.4s ease; flex-shrink: 0; }
+.client-logo { width: 100px; height: 100px; background: rgba(255,255,255,0.05); border-radius: 14px; display: flex; align-items: center; justify-content: center; padding: 12px; border: 1px solid rgba(212, 165, 116, 0.1); transition: all 0.4s ease; flex-shrink: 0; }
 .client-logo:hover { transform: scale(1.1); border-color: rgba(212, 165, 116, 0.4); box-shadow: 0 10px 30px rgba(0,0,0,0.3); }
 .client-logo img { max-width: 100%; max-height: 100%; object-fit: contain; filter: brightness(0.9); transition: filter 0.3s ease; }
 .client-logo:hover img { filter: brightness(1.1); }
 
 /* Register */
-.register-section { padding: 60px 20px; text-align: center; position: relative; z-index: 2; }
-.register-title { font-family: 'Noto Kufi Arabic', sans-serif; font-size: 1.8rem; font-weight: 700; color: var(--gold); margin-bottom: 20px; }
+.register-section { padding: 20px 20px; text-align: center; position: relative; z-index: 2; }
+.register-title { margin-bottom: 12px; font-family: 'Noto Kufi Arabic', sans-serif; font-size: 1.8rem; font-weight: 700; color: var(--gold); margin-bottom: 12px; }
 
 /* Contact */
-.contact-section { padding: 60px 20px 40px; position: relative; z-index: 2; background: rgba(15, 15, 26, 0.8); }
+.contact-section { padding: 35px 20px 25px; position: relative; z-index: 2; background: rgba(15, 15, 26, 0.8); }
 .contact-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; max-width: 700px; margin: 0 auto; }
-.contact-item { background: rgba(255,255,255,0.03); border: 1px solid rgba(212, 165, 116, 0.15); border-radius: 14px; padding: 18px 12px; text-align: center; text-decoration: none; color: var(--white); display: block; }
+.contact-item { background: rgba(255,255,255,0.03); border: 1px solid rgba(212, 165, 116, 0.15); border-radius: 12px; padding: 14px 10px; text-align: center; text-decoration: none; color: var(--white); display: block; }
 .contact-item:hover { transform: translateY(-5px); border-color: rgba(212, 165, 116, 0.4); box-shadow: 0 10px 25px rgba(0,0,0,0.3); }
-.contact-icon { width: 45px; height: 45px; margin: 0 auto 8px; background: linear-gradient(135deg, rgba(212, 165, 116, 0.2), rgba(233, 69, 96, 0.1)); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; color: var(--gold); border: 1px solid rgba(212, 165, 116, 0.3); transition: all 0.4s ease; }
+.contact-icon { width: 38px; height: 38px; margin: 0 auto 6px; background: linear-gradient(135deg, rgba(212, 165, 116, 0.2), rgba(233, 69, 96, 0.1)); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 1.1rem; color: var(--gold); border: 1px solid rgba(212, 165, 116, 0.3); transition: all 0.4s ease; }
 .contact-item:hover .contact-icon { transform: scale(1.1) rotate(5deg); box-shadow: 0 0 15px rgba(212, 165, 116, 0.3); }
-.contact-item h4 { font-size: 0.85rem; font-weight: 700; color: var(--gold); margin-bottom: 4px; }
-.contact-item p { font-size: 0.75rem; color: rgba(255,255,255,0.7); }
+.contact-item h4 { font-size: 0.8rem; font-weight: 700; color: var(--gold); margin-bottom: 4px; }
+.contact-item p { font-size: 0.7rem; color: rgba(255,255,255,0.7); }
 
 /* Footer */
-.footer { padding: 20px; text-align: center; border-top: 1px solid rgba(212, 165, 116, 0.1); position: relative; z-index: 2; }
-.footer p { color: rgba(255,255,255,0.5); font-size: 0.8rem; }
+.footer { padding: 15px; text-align: center; border-top: 1px solid rgba(212, 165, 116, 0.1); position: relative; z-index: 2; }
+.footer p { color: rgba(255,255,255,0.5); font-size: 0.75rem; }
 
 /* About Page */
-.about-page { display: none; min-height: 100vh; padding: 100px 20px 40px; position: relative; z-index: 2; }
+.about-page { display: none; min-height: 100vh; padding: 85px 20px 30px; position: relative; z-index: 2; }
 .about-page.active { display: block; }
 .about-content { max-width: 800px; margin: 0 auto; text-align: center; }
-.about-logo { width: 160px; height: 160px; margin: 0 auto 30px; border-radius: 50%; overflow: hidden; border: 3px solid var(--gold); box-shadow: 0 0 30px rgba(212, 165, 116, 0.3); }
+.about-logo { width: 130px; height: 130px; margin: 0 auto 20px; border-radius: 50%; overflow: hidden; border: 3px solid var(--gold); box-shadow: 0 0 30px rgba(212, 165, 116, 0.3); }
 .about-logo img { width: 100%; height: 100%; object-fit: contain; background: var(--primary); padding: 15px; }
-.about-title { font-family: 'Noto Kufi Arabic', sans-serif; font-size: 2rem; font-weight: 700; color: var(--gold); margin-bottom: 25px; }
-.about-text { font-size: 1rem; line-height: 2; color: rgba(255,255,255,0.8); margin-bottom: 25px; }
-.about-text p { margin-bottom: 15px; }
-.back-btn { display: inline-block; padding: 10px 30px; background: transparent; border: 2px solid var(--gold); color: var(--gold); font-size: 0.9rem; font-weight: 600; border-radius: 50px; cursor: pointer; text-decoration: none; transition: all 0.4s ease; margin-top: 20px; }
+.about-title { font-family: 'Noto Kufi Arabic', sans-serif; font-size: 1.6rem; font-weight: 700; color: var(--gold); margin-bottom: 25px; }
+.about-text { font-size: 0.9rem; line-height: 1.9; color: rgba(255,255,255,0.8); margin-bottom: 20px; }
+.about-text p { margin-bottom: 8px; }
+.back-btn { display: inline-block; padding: 8px 24px; background: transparent; border: 2px solid var(--gold); color: var(--gold); font-size: 0.85rem; font-weight: 600; border-radius: 50px; cursor: pointer; text-decoration: none; transition: all 0.4s ease; margin-top: 20px; }
 .back-btn:hover { background: var(--gold); color: var(--dark); }
 
 /* Join Page */
 .join-page { display: none; min-height: 100vh; padding: 100px 20px 40px; position: relative; z-index: 2; }
 .join-page.active { display: block; }
-.join-form { max-width: 600px; margin: 0 auto; background: rgba(255,255,255,0.03); border: 1px solid rgba(212, 165, 116, 0.15); border-radius: 24px; padding: 35px 25px; }
-.join-form h2 { font-family: 'Noto Kufi Arabic', sans-serif; font-size: 1.6rem; font-weight: 700; color: var(--gold); text-align: center; margin-bottom: 8px; }
-.join-form .form-desc { text-align: center; color: rgba(255,255,255,0.6); margin-bottom: 30px; font-size: 0.85rem; line-height: 1.7; }
-.form-group { margin-bottom: 18px; }
-.form-group label { display: block; font-size: 0.85rem; font-weight: 600; color: var(--gold); margin-bottom: 6px; }
+.join-form { max-width: 600px; margin: 0 auto; background: rgba(255,255,255,0.03); border: 1px solid rgba(212, 165, 116, 0.15); border-radius: 20px; padding: 28px 20px; }
+.join-form h2 { font-family: 'Noto Kufi Arabic', sans-serif; font-size: 1.4rem; font-weight: 700; color: var(--gold); text-align: center; margin-bottom: 8px; }
+.join-form .form-desc { text-align: center; color: rgba(255,255,255,0.6); margin-bottom: 22px; font-size: 0.8rem; line-height: 1.7; }
+.form-group { margin-bottom: 14px; }
+.form-group label { display: block; font-size: 0.8rem; font-weight: 600; color: var(--gold); margin-bottom: 6px; }
 .form-group label .required { color: var(--accent); }
-.form-group input, .form-group select, .form-group textarea { width: 100%; padding: 12px 16px; background: rgba(255,255,255,0.05); border: 1px solid rgba(212, 165, 116, 0.2); border-radius: 10px; color: var(--white); font-size: 0.9rem; font-family: 'Tajawal', sans-serif; transition: all 0.3s ease; }
+.form-group input, .form-group select, .form-group textarea { width: 100%; padding: 10px 14px; background: rgba(255,255,255,0.05); border: 1px solid rgba(212, 165, 116, 0.2); border-radius: 8px; color: var(--white); font-size: 0.85rem; font-family: 'Tajawal', sans-serif; transition: all 0.3s ease; }
 .form-group input:focus, .form-group select:focus, .form-group textarea:focus { outline: none; border-color: var(--gold); box-shadow: 0 0 10px rgba(212, 165, 116, 0.2); }
 .form-group input::placeholder, .form-group textarea::placeholder { color: rgba(255,255,255,0.3); }
 .form-group select option { background: var(--dark); color: var(--white); }
@@ -126,7 +126,7 @@ body { font-family: 'Tajawal', 'Noto Kufi Arabic', sans-serif; background: var(-
 .checkbox-item { display: flex; align-items: center; gap: 6px; }
 .checkbox-item input[type="checkbox"] { width: auto; accent-color: var(--gold); }
 .checkbox-item label { margin-bottom: 0; font-weight: 400; font-size: 0.8rem; color: rgba(255,255,255,0.8); }
-.submit-btn { width: 100%; padding: 14px; background: linear-gradient(135deg, var(--gold), #b8935f); color: var(--dark); font-size: 1rem; font-weight: 700; border: none; border-radius: 50px; cursor: pointer; transition: all 0.4s ease; font-family: 'Tajawal', sans-serif; margin-top: 15px; }
+.submit-btn { width: 100%; padding: 12px; background: linear-gradient(135deg, var(--gold), #b8935f); color: var(--dark); font-size: 0.9rem; font-weight: 700; border: none; border-radius: 50px; cursor: pointer; transition: all 0.4s ease; font-family: 'Tajawal', sans-serif; margin-top: 15px; }
 .submit-btn:hover { transform: scale(1.02); box-shadow: 0 8px 25px rgba(212, 165, 116, 0.4); }
 
 .main-content.hidden { display: none; }
@@ -135,11 +135,16 @@ body { font-family: 'Tajawal', 'Noto Kufi Arabic', sans-serif; background: var(-
   .navbar { padding: 10px 15px; }
   .nav-links { gap: 12px; }
   .nav-links a { font-size: 0.75rem; }
-  .hero-content { flex-direction: column; gap: 25px; }
-  .hero-text h1 { font-size: 2.5rem; }
-  .hero-text .tagline { font-size: 0.85rem; }
-  .hero-image-wrapper { width: 220px; height: 220px; }
-  .welcome-title { font-size: 1.6rem; }
+  .hero { min-height: 50vh; padding: 70px 10px 10px; }
+  .hero-content { flex-direction: row; gap: 12px; align-items: center; }
+  .hero-text { text-align: right; flex: 1; }
+  .hero-text h1 { font-size: 1.6rem; margin-bottom: 4px; }
+  .hero-text .subtitle { font-size: 0.7rem; }
+  .hero-text .tagline { font-size: 0.65rem; }
+  .hero-image-container { flex: 0.5; }
+  .hero-image-wrapper { width: 130px; height: 130px; }
+  .hero-image-shadow { top: -8px; left: -8px; right: -8px; bottom: -8px; filter: blur(15px); }
+  .welcome-title { margin-bottom: 8px; font-size: 1.6rem; }
   .section-title { font-size: 1.5rem; }
   .services-grid { grid-template-columns: 1fr; }
   .contact-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; max-width: 100%; }
@@ -156,7 +161,7 @@ body { font-family: 'Tajawal', 'Noto Kufi Arabic', sans-serif; background: var(-
 
 <nav class="navbar" id="navbar">
   <div class="nav-logo">
-    <img src="https://github.com/basheer-49/CCM/blob/main/%D9%84%D9%8A%D9%86%D9%83%D9%8A%D8%AF%20%D8%A7%D9%86%20%D8%A8%D8%A7%D9%86%D8%B1%20(1080%20x%201080%20px)%20(6).png?raw=true" alt="CCM Logo">
+    <img src="https://github.com/basheer-49/marketing/blob/main/Saba%20jibrel%20(Facebook%20Video).png?raw=true" alt="CCM Logo">
   </div>
   <ul class="nav-links">
     <li><a class="nav-link active" onclick="showHome(); return false;">الرئيسية</a></li>
@@ -170,16 +175,16 @@ body { font-family: 'Tajawal', 'Noto Kufi Arabic', sans-serif; background: var(-
   <section class="hero" id="home">
     <div class="hero-bg-fade"></div>
     <div class="hero-content">
+      <div class="hero-image-container">
+        <div class="hero-image-wrapper">
+          <div class="hero-image-shadow"></div>
+          <img src="https://github.com/basheer-49/marketing/blob/main/Saba%20jibrel%20(Facebook%20Video)%20(1).png?raw=true" alt="CCM Hero" class="hero-image">
+        </div>
+      </div>
       <div class="hero-text">
         <h1>CCM</h1>
         <p class="subtitle">Creative Content Marketing</p>
         <p class="tagline">أول وكالة تسويق عندها هالقد شغف</p>
-      </div>
-      <div class="hero-image-container">
-        <div class="hero-image-wrapper">
-          <div class="hero-image-shadow"></div>
-          <img src="https://github.com/basheer-49/C/blob/main/Untitled%20design%20(23).png?raw=true" alt="CCM Hero" class="hero-image">
-        </div>
       </div>
     </div>
   </section>
@@ -262,7 +267,7 @@ body { font-family: 'Tajawal', 'Noto Kufi Arabic', sans-serif; background: var(-
         <div class="client-logo"><img src="https://github.com/basheer-49/CCM/blob/main/%D9%84%D9%8A%D9%86%D9%83%D9%8A%D8%AF%20%D8%A7%D9%86%20%D8%A8%D8%A7%D9%86%D8%B1%20(1080%20x%201080%20px)%20(14).png?raw=true" alt="رذاذ" loading="lazy"></div>
         <div class="client-logo"><img src="https://github.com/basheer-49/CCM/blob/main/%D9%84%D9%8A%D9%86%D9%83%D9%8A%D8%AF%20%D8%A7%D9%86%20%D8%A8%D8%A7%D9%86%D8%B1%20(1080%20x%201080%20px)%20(4).png?raw=true" alt="OCEAN" loading="lazy"></div>
         <div class="client-logo"><img src="https://github.com/basheer-49/CCM/blob/main/%D9%84%D9%8A%D9%86%D9%83%D9%8A%D8%AF%20%D8%A7%D9%86%20%D8%A8%D8%A7%D9%86%D8%B1%20(1080%20x%201080%20px)%20(5).png?raw=true" alt="PRO PORTAL" loading="lazy"></div>
-        <div class="client-logo"><img src="https://github.com/basheer-49/CCM/blob/main/%D9%84%D9%8A%D9%86%D9%83%D9%8A%D8%AF%20%D8%A7%D9%86%20%D8%A8%D8%A7%D9%86%D8%B1%20(1080%20x%201080%20px)%20(6).png?raw=true" alt="CCM" loading="lazy"></div>
+        <div class="client-logo"><img src="https://github.com/basheer-49/marketing/blob/main/Saba%20jibrel%20(Facebook%20Video).png?raw=true" alt="CCM" loading="lazy"></div>
         <div class="client-logo"><img src="https://github.com/basheer-49/CCM/blob/main/%D9%84%D9%8A%D9%86%D9%83%D9%8A%D8%AF%20%D8%A7%D9%86%20%D8%A8%D8%A7%D9%86%D8%B1%20(1080%20x%201080%20px)%20(7).png?raw=true" alt="خان زمان" loading="lazy"></div>
         <div class="client-logo"><img src="https://github.com/basheer-49/CCM/blob/main/%D9%84%D9%8A%D9%86%D9%83%D9%8A%D8%AF%20%D8%A7%D9%86%20%D8%A8%D8%A7%D9%86%D8%B1%20(1080%20x%201080%20px)%20(8).png?raw=true" alt="حلول الوطن" loading="lazy"></div>
         <div class="client-logo"><img src="https://github.com/basheer-49/CCM/blob/main/%D9%84%D9%8A%D9%86%D9%83%D9%8A%D8%AF%20%D8%A7%D9%86%20%D8%A8%D8%A7%D9%86%D8%B1%20(1080%20x%201080%20px).png?raw=true" alt="البشير بن محمد أبو عمر" loading="lazy"></div>
@@ -319,7 +324,7 @@ body { font-family: 'Tajawal', 'Noto Kufi Arabic', sans-serif; background: var(-
 <div class="about-page" id="aboutPage">
   <div class="about-content">
     <div class="about-logo">
-      <img src="https://github.com/basheer-49/CCM/blob/main/%D9%84%D9%8A%D9%86%D9%83%D9%8A%D8%AF%20%D8%A7%D9%86%20%D8%A8%D8%A7%D9%86%D8%B1%20(1080%20x%201080%20px)%20(6).png?raw=true" alt="CCM Logo">
+      <img src="https://github.com/basheer-49/marketing/blob/main/Saba%20jibrel%20(Facebook%20Video).png?raw=true" alt="CCM Logo">
     </div>
     <h2 class="about-title">من نحن</h2>
     <div class="about-text">
